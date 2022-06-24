@@ -9,19 +9,22 @@
 </head>
 <body>
     <div id="app">
-        <h1>Hello,{{say}}</h1>
-        <input type="text"/>
+        <h1>{{name}}</h1>
+        <a v-bind:href="url">baidu1,{{url.name}}</a>
+        <a href="http://www.baidu.com">baidu2,{{url.theurl}}</a>
     </div>
-
     <script>
-        console.log('aaa');
         const app = new Vue({
             el:'#app',
-            data:{ 
-                say:'yzd',
-                value:''
+            data:{
+                name:'指令语法',
+                url:{
+                    name:'aaaaaa',
+                    theurl:'bbbbbbb'
+                }
             }
         })
     </script>
+    
 </body>
 </html>

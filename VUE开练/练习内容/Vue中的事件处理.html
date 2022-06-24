@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vue/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h2 @click="showInfo('你也好','哈哈')">点我提示信息1</h2>
+        <h2 @click="showInfo($event,66)">点我提示信息2</h2>
+    </div>
+
+    <script>
+        const vm = new Vue({
+            el:'#app',
+            data(){
+                return {
+
+                }
+            },
+            methods: {
+                showInfo(event,num){
+                    console.log(event,num)
+                    console.log(event.target,num)
+                }
+            },
+        })
+    </script>
+</body>
+</html>

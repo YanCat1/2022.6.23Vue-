@@ -8,18 +8,16 @@
     <script src="../vue/vue.js"></script>
 </head>
 <body>
-    <div id="app">
-        <h1>Hello,{{say}}</h1>
-        <input type="text"/>
+    <div id="app"> 
+        <div>{{name}}</div>
     </div>
-
     <script>
-        console.log('aaa');
         const app = new Vue({
             el:'#app',
-            data:{ 
-                say:'yzd',
-                value:''
+            data(){
+                return {
+                    name:'yzd'
+                }
             }
         })
     </script>
